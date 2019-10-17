@@ -38,17 +38,29 @@ html {
 }
 
 .banner {
-  background-image: url("../images/banner.jpg"), linear-gradient(to bottom, rgba(16, 52, 41, 0), rgba(16, 52, 41, .8));
-  background-position: center;
+  background-image: linear-gradient(to bottom, rgba(16, 52, 41, 0), rgba(16, 52, 41, .8)), url("../images/banner.jpg");
+  background-size: 100% 50%, cover;
+  background-repeat: no-repeat;
+  border-bottom: 3px solid #2d5a4d;
+  background-position: left bottom, center bottom;
+  padding-top: 11.5em;
 }
 
 .banner-content {
   color: #fff;
   background-image: url("../images/two-leaves.svg");
   background-repeat: no-repeat;
-  background-position: .75em center;
-  background-size: 6em auto;
-  padding-top: 20em;
+  background-size: 6.1em auto;
+  background-position: .75em top;
+  padding-top: 7.4em;
+}
+
+@media only screen and (min-width: 38em) {
+
+  .banner {
+    padding-top: 9.5rem;
+  }
+
 }
 
 @media only screen and (min-width: 60em) {
@@ -59,6 +71,27 @@ html {
 
   .nav {
     text-align: right;
+  }
+
+  .banner {
+    padding-top: 9rem;
+  }
+
+  .banner-content {
+    padding-top: 7em;
+    background-size: 5.5rem auto;
+  }
+
+}
+
+@media only screen and (min-width: 90em) {
+
+  .banner {
+    padding-top: 8rem;
+  }
+
+  .banner-content {
+    background-size: 5rem auto;
   }
 
 }
